@@ -8,7 +8,7 @@ const config = require('./config');
 const useMongoAuthState = require('./lib/mongoAuthState');
 
 // Global anti‑link toggle
-let antiLinkEnabled = false;
+global.antiLinkEnabled = false
 
 // Connect to MongoDB, then start bot
 mongoose.connect(config.mongoURI)
