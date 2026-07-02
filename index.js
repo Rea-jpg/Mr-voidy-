@@ -90,7 +90,7 @@ async function startBot() {
         const sender = msg.key.participant || msg.key.remoteJid;
 
         // Anti‑link check (only in groups, when enabled)
-        if (isGroup && antiLinkEnabled) {
+        if (isGroup && global.antiLinkEnabled) {
             const urlRegex = /https?:\/\/\S+|www\.\S+/i;
             if (urlRegex.test(text)) {
                 try {
